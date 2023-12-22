@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WILDBERRIESS</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="header">
+    <div class="header-content">
+        <div class="header-title-container">
+            <button class="header-burger-button">
+                <img class="header-burger-button-icon" src="assets/icons/header/burger-icon.svg" alt="burger-icon"/>
+                <img class="header-burger-button-mobile-icon" src="assets/icons/mobile/burger-mobile.svg"
+                     alt="burger-icon"/>
+            </button>
+            <a class="brand-name" href="">
+                <span class="brand-name-text">Товары и точка</span>
+            </a>
+            <img class="header-search-icon-mobile" src="assets/icons/mobile/search-icon-mobile.svg" alt="search-icon"/>
+        </div>
+        <div class="header-search-container">
+            <label for="header-input" class="header-search-input-label">
+                <input id="header-input" class="header-search-input" placeholder="Я ищу..."/>
+            </label>
+            <img src="assets/icons/header/search.svg" alt="search-icon"/>
+        </div>
+        <div class="header-icon-buttons-container">
+            <div class="header-profile-icon-container">
+                <img src="assets/icons/header/profile-icon.svg" alt="profile-icon"/>
+                <span class="header-profile-text">Профиль</span>
+            </div>
+            <div class="header-basket-icon-container"></div>
+
+        </div>
+    </div>
+</header>
+<main class="main">
+    <div class="main-content">
+        <div class="main-basket-container">
+            <h1 class="main-basket-text">Корзина</h1>
+            <div class="product-delivery-section">
+                <div class="in-stock-container">
+                    <div class="accordion-header">
+                        <div class="pick-all-checkbox-container">
+                            <input checked type="checkbox" class="checkbox" id="choose-all-checkbox">
+                            <label for="choose-all-checkbox" class="custom-checkbox-label"></label>
+                            <span class="choose-all-checkbox-text">Выбрать все</span>
+                        </div>
+                        <button class="accordion-arrow-button" id="accordion-arrow-button">
+                            <img class="arrow-icon" src="assets/icons/accordion-arrow.svg" alt="accordion-arrow"/>
+                        </button>
+                    </div>
+                    <ul class="cards-container" id="cards-list">
+                    </ul>
+                </div>
+                <div class="out-of-stock-container">
+                    <div class="out-of-stock-accordion-header">
+                        <span class="out-of-stock-text">Отсутствуют · 3 товара</span>
+                        <button id="not-available-accordion-arrow-button" class="accordion-arrow-button">
+                            <img src="assets/icons/accordion-arrow.svg" alt="accordion-arrow"/>
+                        </button>
+                    </div>
+                    <ul class="not-available-cards-container" id="not-available-prod-cards-list"></ul>
+                </div>
+                <div class="order-placement-container">
+                    <div class="delivery-container">
+                        <div class="delivery-method-container">
+                            <div class="delivery-method-header">
+                                <span class="delivery-method-header-text">Способ доставки</span>
+                                <button id="change-pick-point-method-button" class="delivery-method-header-button">Изменить</button>
+                            </div>
+                            <div class="delivery-method-main" id="delivery-method"></div>
+                        </div>
+
+                        <div class="delivery-method-footer">
+                            <div class="delivery-method-footer-info-container">
+                                <img src="./assets/icons/price-shipping-green.svg" alt="price-shipping-icon"/>
+                                <span class="return-delivery-text">Обратная доставка товаров нa склад при отказе—
+                                        <span id="return-delivery-price-info" class="return-delivery-text-green">бесплатно</span>
+                                    </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="payment-container">
+                        <div class="payment-method-container">
+                            <div class="payment-method-header">
+                                <div class="payment-method-header-text-container">
+                                    <span class="payment-method-header-text">Способ оплаты</span>
+                                    <button id="change-payment-method-button" class="delivery-method-header-button">
+                                        Изменить
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="payment-method-main" id="payment-method-main">
+                            </div>
+                        </div>
+                        <div class="payment-method-footer">
+                            <span class="payment-method-footer-text">Спишем оплату с карты при получении</span>
+                        </div>
+                    </div>
+                    <div class="receiver-container">
+                        <div class="receiver-header">
+                            <div class="receiver-header-text-container">
+                                <span class="receiver-method-header-text">Получатель</span>
+                            </div>
+                        </div>
+                        <div class="receiver-inputs-container">
+                            <div class="receiver-name-lastname-inputs-container">
+                                <div class="input-and-error-container">
+                                    <label class="receiver-name-label">
+                                        <input class="receiver-name-input" placeholder="Имя"/>
+                                    </label>
+                                    <span class="receiver-input-error"></span>
+                                </div>
+                                <div class="input-and-error-container">
+                                    <label class="receiver-lastname-label">
+                                        <input class="receiver-lastname-input" placeholder="Фамилия">
+                                    </label>
+                                    <span class="receiver-input-error"></span>
+                                </div>
+                            </div>
+                            <div class="receiver-email-phone-inputs-container">
+                                <div class="input-and-error-container">
+                                    <label class="receiver-email-label">
+                                        <input class="receiver-email-input" placeholder="Почта"/>
+                                    </label>
+                                    <span class="receiver-input-error"></span>
+                                </div>
+                                <div class="input-and-error-container">
+                                    <label class="receiver-phone-label">
+                                        <input class="receiver-phone-input" placeholder="Телефон"/>
+                                    </label>
+                                    <span class="receiver-input-error"></span>
+                                </div>
+                                <div class="input-and-error-container">
+                                    <label class="receiver-INN-label">
+                                        <input class="receiver-INN-input" placeholder="ИНН"/>
+                                    </label>
+                                    <span class="receiver-input-text">Для таможенного оформления</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="total-container"></div>
+    </div>
+
+</main>
+<footer class="footer">
+    <div class="footer-content">
+        <p class="copyright-text">© 2022 ООО «Товары и точка»</p>
+    </div>
+
+</footer>
+<div class="navbar-mobile">
+    <img src="assets/icons/mobile/home-navbar-mobile.svg" alt="add-favorites"/>
+    <img src="assets/icons/mobile/search-icon-navbar-mobile.svg" alt="add-favorites"/>
+    <div class="navbar-mobile-basket-icon-container">
+        <span class="navbar-basket-goods-count-text-mobile">3</span>
+        <img src="assets/icons/mobile/red-basket-mobile.svg" alt="profile-icon"/>
+    </div>
+    <img src="assets/icons/mobile/add-favorites-mobile.svg" alt="add-favorites"/>
+    <img src="assets/icons/mobile/my-profile-icon-mobile.svg" alt="add-favorites"/>
+</div>
+<script type="module" src="dist/bundle.js"></script>
+</body>
+</html>
